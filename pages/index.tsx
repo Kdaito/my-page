@@ -1,22 +1,43 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import { client } from "../lib/client";
 import styles from "../styles/profile.module.scss";
 
-type History = {
+type HistoryProps = {
   label: string;
-  year: string;
-  children: React.ReactNode;
+  year: Date;
+  contents: string;
 };
 
-const History: React.VFC<History> = ({ label, children, year }) => (
+type HistoryData = {
+  id: string;
+  title: string;
+  year: Date;
+  contents: string;
+};
+
+type Props = {
+  historyDatas: HistoryData[];
+};
+
+const History: React.VFC<HistoryProps> = ({ label, contents, year }) => (
   <dd className="relative md:ml-[140px] border-l-[3px] py-[40px] lg:py-[60px] pl-[20px] before:content-[''] before:h-[20px] before:w-[20px] before:bg-[#fff] before:absolute before:rounded-[100%] before:left-[-11px]">
     <p className="md:absolute md:left-[-110px]">{year}</p>
     <p className="text-[21px] mt-[2px] md:mt-0 mb-[7px]">{label}</p>
-    <p className="mt-[15px] leading-7 tracking-wide">{children}</p>
+    <p className="mt-[15px] leading-7 tracking-wide">{contents}</p>
   </dd>
 );
 
-const Home: NextPage = () => {
+export const getStaticProps = async () => {
+  const { contents } = await client.get({ endpoint: "history" });
+  return {
+    props: {
+      historyDatas: contents,
+    },
+  };
+};
+
+const Home: React.VFC<Props> = ({ historyDatas }) => {
   return (
     <>
       <div className="pt-[90px] h-[100vh]">
@@ -33,7 +54,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className="absolute bottom-0 lg:bottom-[-140px]">
-            <p className="text-[25px]">↓ scroll</p>
+            <p className="text-[25px] animate-bounce">↓ scroll</p>
           </div>
         </div>
       </div>
@@ -67,18 +88,15 @@ const Home: NextPage = () => {
           <div className="w-[350px] md:w-[700px] lg:w-[1000px] bg-[#222] rounded-lg flex items-center justify-center flex-col py-[50px] md:px-[20px] lg:px-[150px]">
             <h2 className="text-[32px]">History</h2>
             <dl className="px-[30px] w-full">
-              <History year="2017-04-01" label="高校進学">
-                愛知県の県立高校に進学。サッカー部に所属。この頃は特に将来の事を考えることはなく、来たる大学受験と成人に少々怯えながらも、毎日部活、勉強に励んでいた。毎週水曜日にあるランメニューが最高のストレスで、今思い出しても嫌な気持ちになる。
-              </History>
-              <History year="2020-04-01" label="大学進学">
-                滋賀大学に進学。入学時には具体的な目標ややりたいことがなく、「俺は一人で静かに過ごしたいぜ」とこじらせてしまい部活にもサークルにも参加しなかった。また、コロナ禍で大学がオンラインになったことも重なり、ぼっち大学生に。一年生の秋頃から約一年間居酒屋のバイトをして人見知りを克服した。
-              </History>
-              <History year="2020-11-01" label="プログラミングスクール入学">
-                一年生の夏頃に、学校の授業で触れたことをきっかけにプログラミングの勉強を開始。ぼっち大学生になったことが功を奏し、ほとんどの時間をプログラミングの勉強に費やす。本格的にプログラミングを学びたいと思い、秋頃にスクールに入学する。この頃からwebエンジニアになりたいという目標を持つようになる。
-              </History>
-              <History year="2021-5-25" label="長期インターン開始">
-                約四ヶ月の学習期間を終えて、スクールを卒業。実務経験を求めて長期就業型インターンを探し始める。ここでイーストフィールズ株式会社様に拾っていただき、念願のwebエンジニアとしての長期インターン開始。主にフロントエンドを中心に開発に従事。
-              </History>
+              {historyDatas.map((date) => (
+                <div key={date.id}>
+                  <History
+                    label={date.title}
+                    year={date.year}
+                    contents={date.contents}
+                  />
+                </div>
+              ))}
             </dl>
           </div>
         </div>
