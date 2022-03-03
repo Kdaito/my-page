@@ -11,7 +11,7 @@ const SkillCard: React.VFC<SkillCardProps> = ({ src, label, link }) => {
   const router = useRouter();
   return (
     <button onClick={() => router.push(link)}>
-      <div className="w-[300px] py-[40px] bg-[#222] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-200">
+      <div className="w-[300px] py-[40px] bg-[#222] rounded-lg flex flex-col items-center justify-center lg:hover:scale-110 duration-200">
         <div className="relative w-[150px] h-[150px]">
           <Image src={src} alt="language icon" layout="fill" />
         </div>
@@ -23,7 +23,7 @@ const SkillCard: React.VFC<SkillCardProps> = ({ src, label, link }) => {
 const Skills: React.VFC = () => {
   return (
     <div className="pt-[90px] min-h-[100vh]">
-      <div className="w-[300px] md:w-[640px] lg:w-[960px] mx-auto bg-[#222] mt-[40px] md:mt-[70px] lg:mt-[100px] rounded-lg py-[30px] px-[30px] md:px-[60px] lg:px-[100px] lg:mb-[100px]">
+      <div className="w-[300px] md:w-[640px] mx-auto bg-[#222] mt-[40px] md:mt-[70px] lg:mt-[100px] rounded-lg py-[30px] px-[30px] md:px-[60px] lg:px-[100px] lg:mb-[100px] leading-7 tracking-wide">
         <p className="text-center text-[32px] pb-[20px]">Skills</p>
         <p className="pb-[30px]">
           スクール、ポートフォリオ作成、インターンなどを通して経験した言語、フレームワーク、ライブラリなどを紹介します。以下で紹介するものは一定の経験があるものであり、全てが完璧に扱えるわけではありません。Productsページにて、実際にポートフォリオを紹介しておりますので、詳しくはそちらをご覧ください。

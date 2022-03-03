@@ -9,7 +9,7 @@ type History = {
 };
 
 const History: React.VFC<History> = ({ label, children, year }) => (
-  <dd className="relative md:ml-[140px] border-l-[3px] py-[20px] pl-[20px] before:content-[''] before:h-[20px] before:w-[20px] before:bg-[#fff] before:absolute before:rounded-[100%] before:left-[-11px]">
+  <dd className="relative md:ml-[140px] border-l-[3px] py-[40px] lg:py-[60px] pl-[20px] before:content-[''] before:h-[20px] before:w-[20px] before:bg-[#fff] before:absolute before:rounded-[100%] before:left-[-11px]">
     <p className="md:absolute md:left-[-110px]">{year}</p>
     <p className="text-[21px] mt-[2px] md:mt-0 mb-[7px]">{label}</p>
     <p className="mt-[15px] leading-7 tracking-wide">{children}</p>
@@ -20,8 +20,8 @@ const Home: NextPage = () => {
   return (
     <>
       <div className="pt-[90px] h-[100vh]">
-        <div className="min-h-[100%] flex items-center justify-between md:justify-center flex-col-reverse md:flex-row pt-[80px] md:pt-0 relative">
-          <div className="mt-[40px] text-center mb-[250px] md:my-0 md:mr-[90px]">
+        <div className="flex items-center justify-between lg:justify-center flex-col-reverse lg:flex-row pt-[80px] md:pt-[150px] relative">
+          <div className="mt-[40px] text-center mb-[250px] lg:my-0 lg:mr-[90px]">
             <h2 className="text-[36px]">Kobayashi Hiroto</h2>
             <p className="text-[21px]">Welcome to my page !</p>
           </div>
@@ -32,12 +32,12 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-[50px]">
+          <div className="absolute bottom-0 lg:bottom-[-140px]">
             <p className="text-[25px]">↓ scroll</p>
           </div>
         </div>
       </div>
-      <div className="pt-[50px] pb-[90px]">
+      <div className="mt-[50px] pb-[90px]">
         <div className="w-full h-full flex items-center justify-center">
           <div className="w-[350px] md:w-[700px] lg:w-[1000px] bg-[#222] rounded-lg flex items-center justify-center flex-col py-[50px] md:px-[70px] lg:px-[150px]">
             <h2 className="text-[32px]">Profile</h2>
