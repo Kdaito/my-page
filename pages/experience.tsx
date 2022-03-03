@@ -19,7 +19,7 @@ const ExperienceCard: React.VFC<ExperienceCardProps> = ({
       <p className="text-center md:text-left md:pl-[40px] text-[20px] md:text-[30px] border-b-[2px] border-[#686868] pb-[7px]">
         {companyName}
       </p>
-      <p className="py-[20px] md:text-[20px] lg:px-[20px] leading-8 tracking-wider">
+      <p className="py-[20px] text-[17px] leading-8 tracking-wider">
         {discription}
       </p>
       <div className="flex items-center justify-start flex-wrap">
