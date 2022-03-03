@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import { client } from "../lib/client";
+import { formatDate } from "../lib/date";
 import styles from "../styles/profile.module.scss";
 
 type HistoryProps = {
@@ -22,14 +23,17 @@ type Props = {
 
 const History: React.VFC<HistoryProps> = ({ label, contents, year }) => (
   <dd className="relative md:ml-[140px] border-l-[3px] py-[40px] lg:py-[60px] pl-[20px] before:content-[''] before:h-[20px] before:w-[20px] before:bg-[#fff] before:absolute before:rounded-[100%] before:left-[-11px]">
-    <p className="md:absolute md:left-[-110px]">{year}</p>
+    <p className="md:absolute md:left-[-110px]">{formatDate(year)}</p>
     <p className="text-[21px] mt-[2px] md:mt-0 mb-[7px]">{label}</p>
     <p className="mt-[15px] leading-7 tracking-wide">{contents}</p>
   </dd>
 );
 
 export const getStaticProps = async () => {
-  const { contents } = await client.get({ endpoint: "history" });
+  const { contents } = await client.get({
+    endpoint: "history",
+    queries: { orders: "publishedAt" },
+  });
   return {
     props: {
       historyDatas: contents,
