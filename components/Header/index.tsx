@@ -11,7 +11,7 @@ const HeaderButton: React.VFC<HeaderButton> = ({ path, children }) => {
   return (
     <div className="relative">
       <button
-        className="text-[22px] px-[15px] py-[5px] after:absolute after:bottom-[-4px] after:left-[0] after:content-[''] after:w-[100%] after:h-[2px] after:bg-[#fff] after:origin-center after:duration-300 after:scale-x-0 hover:after:scale-x-100 hover:after:origin-center"
+        className="text-[22px] px-[15px] py-[5px] after:absolute after:bottom-[-4px] after:left-[0] after:content-[''] after:w-[100%] after:h-[2px] after:bg-text after:origin-center after:duration-300 after:scale-x-0 hover:after:scale-x-100 hover:after:origin-center"
         onClick={() => router.push(`${path}`)}
       >
         {children}
@@ -47,7 +47,7 @@ const Header: React.VFC = () => {
 
   return (
     <>
-      <div className="fixed z-[9999] bg-background-main w-full h-[90px]">
+      <div className="fixed z-[9999] bg-background-header w-full h-[90px]">
         <div className="h-full w-[80%] max-w-[1280px] mx-auto flex items-center justify-between">
           <button className="px-[15px] py-[5px]">
             <h1 className="text-[32px] font-medium">Kobayashi</h1>
@@ -59,19 +59,19 @@ const Header: React.VFC = () => {
             <HeaderButton path="/products">Products</HeaderButton>
           </div>
           <button
-            className="border border-[#333] lg:hidden w-[68px] h-[50px] rounded-md flex items-center justify-between flex-col py-[9px] px-[9px]"
+            className="border border-humberger lg:hidden w-[68px] h-[50px] rounded-md flex items-center justify-between flex-col py-[9px] px-[9px]"
             onClick={() => toggleModal()}
           >
-            <div className="w-[90%] h-[4px] bg-[#333]" />
-            <div className="w-[90%] h-[4px] bg-[#333]" />
-            <div className="w-[90%] h-[4px] bg-[#333]" />
+            <div className="w-[90%] h-[4px] bg-humberger" />
+            <div className="w-[90%] h-[4px] bg-humberger" />
+            <div className="w-[90%] h-[4px] bg-humberger" />
           </button>
         </div>
       </div>
       <div
         className={`z-[999] fixed left-0 w-full h-screen ${drawerScale} origin-center duration-500`}
       >
-        <div className="bg-[#333] w-full h-[500px] flex items-center justify-between flex-col py-[50px]">
+        <div className="bg-drawer w-full h-[500px] flex items-center justify-between flex-col py-[50px]">
           <button
             className="text-[32px] w-full py-[20px]"
             onClick={() => onClickDrawer("/")}

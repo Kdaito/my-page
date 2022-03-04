@@ -22,7 +22,7 @@ type Props = {
 };
 
 const History: React.VFC<HistoryProps> = ({ label, contents, year }) => (
-  <dd className="relative md:ml-[140px] border-l-[3px] py-[40px] lg:py-[60px] pl-[20px] before:content-[''] before:h-[20px] before:w-[20px] before:bg-[#fff] before:absolute before:rounded-[100%] before:left-[-11px]">
+  <dd className="relative md:ml-[140px] border-l-[3px] py-[40px] lg:py-[60px] pl-[20px] before:content-[''] before:h-[20px] before:w-[20px] before:bg-text before:absolute before:rounded-[100%] before:left-[-11px]">
     <p className="md:absolute md:left-[-110px]">{formatDate(year)}</p>
     <p className="text-[21px] mt-[2px] md:mt-0 mb-[7px]">{label}</p>
     <p className="mt-[15px] leading-7 tracking-wide">{contents}</p>
@@ -30,10 +30,11 @@ const History: React.VFC<HistoryProps> = ({ label, contents, year }) => (
 );
 
 export const getStaticProps = async () => {
-  const { contents } = await client.get({
-    endpoint: "history",
-    queries: { orders: "publishedAt" },
-  });
+  // const { contents } = await client.get({
+  //   endpoint: "history",
+  //   queries: { orders: "publishedAt" },
+  // });
+  const contents: HistoryData[] = [];
   return {
     props: {
       historyDatas: contents,
@@ -64,7 +65,7 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
       </div>
       <div className="mt-[50px] pb-[90px]">
         <div className="w-full h-full flex items-center justify-center">
-          <div className="w-[350px] md:w-[700px] lg:w-[1000px] bg-[#222] rounded-lg flex items-center justify-center flex-col py-[50px] md:px-[70px] lg:px-[150px]">
+          <div className="w-[350px] md:w-[700px] lg:w-[1000px] bg-card rounded-lg flex items-center justify-center flex-col py-[50px] md:px-[70px] lg:px-[150px]">
             <h2 className="text-[32px]">Profile</h2>
             <div className="flex items-center justify-between flex-col md:flex-row text-center">
               <div className="py-[30px]">
@@ -89,7 +90,7 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
           </div>
         </div>
         <div className="w-full h-full flex items-center justify-center mt-[40px]">
-          <div className="w-[350px] md:w-[700px] lg:w-[1000px] bg-[#222] rounded-lg flex items-center justify-center flex-col py-[50px] md:px-[20px] lg:px-[150px]">
+          <div className="w-[350px] md:w-[700px] lg:w-[1000px] bg-card rounded-lg flex items-center justify-center flex-col py-[50px] md:px-[20px] lg:px-[150px]">
             <h2 className="text-[32px]">History</h2>
             <dl className="px-[30px] w-full">
               {historyDatas.map((date) => (

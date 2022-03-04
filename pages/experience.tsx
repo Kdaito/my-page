@@ -15,8 +15,8 @@ const ExperienceCard: React.VFC<ExperienceCardProps> = ({
   endDate,
 }) => {
   return (
-    <div className="w-[350px] md:w-[600px] lg:w-[1000px] bg-[#222] rounded-lg py-[30px] px-[20px] lg:py-[55px] lg:px-[30px]">
-      <p className="text-center md:text-left md:pl-[40px] text-[20px] md:text-[30px] border-b-[2px] border-[#686868] pb-[7px]">
+    <div className="w-[350px] md:w-[600px] lg:w-[1000px] bg-card rounded-lg py-[30px] px-[20px] lg:py-[55px] lg:px-[30px]">
+      <p className="text-center md:text-left md:pl-[40px] text-[20px] md:text-[30px] border-b-[2px] border-border pb-[7px]">
         {companyName}
       </p>
       <p className="py-[20px] text-[17px] leading-8 tracking-wider">

@@ -26,7 +26,7 @@ const ExperienceCard: React.VFC<ExperienceCardProps> = ({
   );
 
   return (
-    <div className="w-[350px] md:w-[600px] lg:w-[1000px] bg-[#222] rounded-lg py-[30px] px-[20px] lg:py-[55px] lg:px-[50px] pb-[60px]">
+    <div className="w-[350px] md:w-[600px] lg:w-[1000px] bg-card rounded-lg py-[30px] px-[20px] lg:py-[55px] lg:px-[50px] pb-[60px]">
       <div className="flex items-center justify-center flex-col lg:flex-row">
         <div>
           <div className="relative w-[250px] h-[250px] mb-[20px]">
@@ -47,7 +47,7 @@ const ExperienceCard: React.VFC<ExperienceCardProps> = ({
           </div>
         </div>
         <div className="lg:pl-[40px]">
-          <p className="text-center md:text-left md:pl-[40px] text-[20px] md:text-[30px] border-b-[2px] border-[#686868] pb-[7px]">
+          <p className="text-center md:text-left md:pl-[40px] text-[20px] md:text-[30px] border-b-[2px] border-border pb-[7px]">
             {title}
           </p>
           <p className="py-[20px] text-[17px] leading-8 tracking-wider md:px-[20px]">
