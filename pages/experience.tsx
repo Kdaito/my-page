@@ -48,8 +48,8 @@ const Experience: React.VFC = () => {
         <div className="flex items-center justify-center flex-col py-[30px]">
           <ExperienceCard
             companyName="イーストフィールズ株式会社"
-            tags={["vue", "react", "firebase", "algolia"]}
-            discription="長期インターン生として、大学一年生の頃から現在に至るまで修行中です。長期インターン生として、大学一年生の頃から現在に至るまで修行中です。長期インターン生として、大学一年生の頃から現在に至るまで修行中です。長期インターン生として、大学一年生の頃から現在に至るまで修行中です。長期インターン生として、大学一年生の頃から現在に至るまで修行中です。長期インターン生として、大学一年生の頃から現在に至るまで修行中です。"
+            tags={["Vue.js", "React.js", "Next.js", "Tailwind.css", "Firebase", "Algolia"]}
+            discription="長期インターン生として、大学一年生の頃から現在に至るまで修行中です。Vue.jsとFirebaseを使用したマッチングプラットフォーム開発や、React.jsとFirebaseを使用した人材管理アプリ開発に携わっております。また、最近ではNext.jsを使用したテックブログの作成に参画しております。"
             startDate="2021-05-25"
             endDate={null}
           />

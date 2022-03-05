@@ -3,6 +3,7 @@ import TagChip from "../components/TagChip";
 import { IoDesktopSharp } from "react-icons/io5";
 import { BsGithub } from "react-icons/bs";
 import { useCallback } from "react";
+import { products } from "../data";
 
 type ExperienceCardProps = {
   title: string;
@@ -26,7 +27,7 @@ const ExperienceCard: React.VFC<ExperienceCardProps> = ({
   );
 
   return (
-    <div className="w-[350px] md:w-[600px] lg:w-[1000px] bg-card rounded-lg py-[30px] px-[20px] lg:py-[55px] lg:px-[50px] pb-[60px]">
+    <div className="w-[350px] md:w-[600px] lg:w-[1000px] bg-card rounded-lg mb-[60px] py-[30px] px-[20px] lg:py-[55px] lg:px-[50px] pb-[60px]">
       <div className="flex items-center justify-center flex-col lg:flex-row">
         <div>
           <div className="relative w-[250px] h-[250px] mb-[20px]">
@@ -38,10 +39,10 @@ const ExperienceCard: React.VFC<ExperienceCardProps> = ({
             />
           </div>
           <div className="flex items-center justify-center pb-[20px] lg:pt-[20px] h-[60px]">
-            <a href={githubUrl}>
+            <a onClick={() => onClickUrl(githubUrl)}>
               <BsGithub className="mx-[20px] text-[50px] lg:hover:text-[60px] duration-200" />
             </a>
-            <a href={url}>
+            <a onClick={() => onClickUrl(url)}>
               <IoDesktopSharp className="mx-[20px] text-[50px] lg:hover:text-[60px] duration-200" />
             </a>
           </div>
@@ -74,14 +75,18 @@ const Experience: React.VFC = () => {
           ポートフォリオ
         </p>
         <div className="flex items-center justify-center flex-col py-[30px]">
-          <ExperienceCard
-            title="イーストフィールズ株式会社"
-            tags={["vue", "react", "firebase", "algolia"]}
-            discription="長期インターン生として、大学一年生の頃から現在に至るまで修行中です。長期インターン生として、大学一年生の頃から現在に至るまで修行中です。長期インターン生として、大学一年生の頃から現在に至るまで修行中です。長期インターン生として、大学一年生の頃から現在に至るまで修行中です。長期インターン生として、大学一年生の頃から現在に至るまで修行中です。長期インターン生として、大学一年生の頃から現在に至るまで修行中です。"
-            imageSrc="/icon.jpg"
-            url="https://qiita.com/shuntaro_tamura/items/99adbe51132e0fb3c9e9"
-            githubUrl="https://qiita.com/shuntaro_tamura/items/99adbe51132e0fb3c9e9"
-          />
+          {products.map((product) => (
+            <div key={product.title}>
+              <ExperienceCard
+                title={product.title}
+                tags={product.tags}
+                discription={product.discription}
+                imageSrc={product.imageSrc}
+                url={product.url}
+                githubUrl={product.githubUrl}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>
