@@ -37,7 +37,7 @@ export const products: Products = [
     title: "Hiroto-Blog",
     tags: ["TypeScript", "Next.js", "MDX", "Tailwind.css"],
     discription:
-      "JavaScriptのフレームワークであるNext.jsを使用して、自分のテックブログを作成しました。見た目はTailwind.cssを使用してテックブラグらしからぬ柔らかい見た目にしてみました。",
+      "JavaScriptのフレームワークであるNext.jsを使用して、自分のテックブログを作成しました。見た目はTailwind.cssを使用してテックブログらしからぬ柔らかい見た目にしてみました。",
     imageSrc: "/products/hiroto-blog.jpeg",
     url: "https://my-blog-rho-blue.vercel.app/",
     githubUrl: "https://github.com/Kdaito/my-page",

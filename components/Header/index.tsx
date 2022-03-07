@@ -47,7 +47,7 @@ const Header: React.VFC = () => {
 
   return (
     <>
-      <div className="fixed z-[9999] bg-background-header w-full h-[90px]">
+      <div className="fixed z-[9999] backdrop-blur-md bg-[#738287]/[.25] shadow-[2px_8px_8px_rgba(0,0,0,0.3)] w-full h-[90px]">
         <div className="h-full w-[80%] max-w-[1280px] mx-auto flex items-center justify-between">
           <button className="px-[15px] py-[5px]">
             <h1 className="text-[32px] font-medium">Kobayashi</h1>
@@ -71,7 +71,7 @@ const Header: React.VFC = () => {
       <div
         className={`z-[999] fixed left-0 w-full h-screen ${drawerScale} origin-center duration-500`}
       >
-        <div className="bg-drawer w-full h-[500px] flex items-center justify-between flex-col py-[50px]">
+        <div className="backdrop-blur-md bg-[#738287]/[.25] shadow-[2px_8px_8px_rgba(0,0,0,0.3)] w-full h-[500px] flex items-center justify-between flex-col py-[50px]">
           <button
             className="text-[32px] w-full py-[20px]"
             onClick={() => onClickDrawer("/")}
@@ -98,7 +98,7 @@ const Header: React.VFC = () => {
           </button>
         </div>
         <button
-          className="w-full h-full bg-[#000]/[.4]"
+          className="w-full h-full bg-[#000]/[.4] backdrop-blur-md"
           onClick={() => onCloseDrawer()}
         />
       </div>

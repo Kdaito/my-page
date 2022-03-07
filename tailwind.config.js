@@ -12,7 +12,7 @@ module.exports = {
       "point-main": "#00ff00",
       "card": "#222",
       "chip" : "#555",
-      "humberger" : "#222",
+      "humberger" : "#fff",
       "drawer": "#222",
       "skillCard": "transparent",
       "text": "#fff",

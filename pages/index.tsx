@@ -1,5 +1,6 @@
 // import type { NextPage } from "next";
 import Image from "next/image";
+import GlassCard from "../components/GlassCard";
 import { histories } from "../data";
 // import { client } from "../lib/client";
 // import { formatDate } from "../lib/date";
@@ -66,7 +67,7 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
       </div>
       <div className="mt-[50px] pb-[90px]">
         <div className="w-full h-full flex items-center justify-center">
-          <div className="w-[350px] md:w-[700px] lg:w-[1000px] bg-card rounded-lg flex items-center justify-center flex-col py-[50px] md:px-[70px] lg:px-[150px]">
+          <GlassCard className="w-[350px] md:w-[700px] lg:w-[1000px] flex items-center justify-center flex-col py-[50px] md:px-[70px] lg:px-[150px]">
             <h2 className="text-[32px]">Profile</h2>
             <div className="flex items-center justify-between flex-col md:flex-row text-center">
               <div className="py-[30px]">
@@ -88,10 +89,10 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
                 </p>
               </div>
             </div>
-          </div>
+          </GlassCard>
         </div>
         <div className="w-full h-full flex items-center justify-center mt-[40px]">
-          <div className="w-[350px] md:w-[700px] lg:w-[1000px] bg-card rounded-lg flex items-center justify-center flex-col py-[50px] md:px-[20px] lg:px-[150px]">
+          <GlassCard className="w-[350px] md:w-[700px] lg:w-[1000px] flex items-center justify-center flex-col py-[50px] md:px-[20px] lg:px-[150px]">
             <h2 className="text-[32px]">History</h2>
             <dl className="px-[30px] w-full">
               {historyDatas.map((date) => (
@@ -104,7 +105,7 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
                 </div>
               ))}
             </dl>
-          </div>
+          </GlassCard>
         </div>
       </div>
     </>

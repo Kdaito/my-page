@@ -1,3 +1,4 @@
+import GlassCard from "../components/GlassCard";
 import TagChip from "../components/TagChip";
 
 type ExperienceCardProps = {
@@ -15,7 +16,7 @@ const ExperienceCard: React.VFC<ExperienceCardProps> = ({
   endDate,
 }) => {
   return (
-    <div className="w-[350px] md:w-[600px] lg:w-[1000px] bg-card rounded-lg py-[30px] px-[20px] lg:py-[55px] lg:px-[30px]">
+    <GlassCard className="w-[350px] md:w-[600px] lg:w-[1000px] py-[30px] px-[20px] lg:py-[55px] lg:px-[30px]">
       <p className="text-center md:text-left md:pl-[40px] text-[20px] md:text-[30px] border-b-[2px] border-border pb-[7px]">
         {companyName}
       </p>
@@ -34,7 +35,7 @@ const ExperienceCard: React.VFC<ExperienceCardProps> = ({
         <p className="mx-[15px]">〜</p>
         <p className="md:text-[20px]">{endDate || "現在"}</p>
       </div>
-    </div>
+    </GlassCard>
   );
 };
 
@@ -42,14 +43,21 @@ const Experience: React.VFC = () => {
   return (
     <div className="pt-[90px] min-h-[100vh]">
       <div className="pt-[20px] lg:pb-[100px]">
-        <p className="text-center text-[22px] md:text-[32px] py-[20px] md:pt-[40px]">
+        <p className="text-center text-[22px] md:text-[32px] py-[20px] md:pt-[40px] relative z-10">
           インターン実績
         </p>
         <div className="flex items-center justify-center flex-col py-[30px]">
           <ExperienceCard
             companyName="イーストフィールズ株式会社"
-            tags={["Vue.js", "React.js", "Next.js", "Tailwind.css", "Firebase", "Algolia"]}
-            discription="長期インターン生として、大学一年生の頃から現在に至るまで修行中です。Vue.jsとFirebaseを使用したマッチングプラットフォーム開発や、React.jsとFirebaseを使用した人材管理アプリ開発に携わっております。また、最近ではNext.jsを使用したテックブログの作成に参画しております。"
+            tags={[
+              "Vue.js",
+              "React.js",
+              "Next.js",
+              "Tailwind.css",
+              "Firebase",
+              "Algolia",
+            ]}
+            discription="長期インターン生として、大学二年生の春頃から現在に至るまで修行中です。Vue.jsとFirebaseを使用したマッチングプラットフォーム開発や、React.jsとFirebaseを使用した人材管理アプリ開発に携わっております。また、最近ではNext.jsを使用したテックブログの作成に参画しております。"
             startDate="2021-05-25"
             endDate={null}
           />

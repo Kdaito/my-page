@@ -4,6 +4,7 @@ import { IoDesktopSharp } from "react-icons/io5";
 import { BsGithub } from "react-icons/bs";
 import { useCallback } from "react";
 import { products } from "../data";
+import GlassCard from "../components/GlassCard";
 
 type ExperienceCardProps = {
   title: string;
@@ -27,7 +28,7 @@ const ExperienceCard: React.VFC<ExperienceCardProps> = ({
   );
 
   return (
-    <div className="w-[350px] md:w-[600px] lg:w-[1000px] bg-card rounded-lg mb-[60px] py-[30px] px-[20px] lg:py-[55px] lg:px-[50px] pb-[60px]">
+    <GlassCard className="w-[350px] md:w-[600px] lg:w-[1000px] py-[30px] px-[20px] lg:py-[55px] lg:px-[50px] pb-[60px]">
       <div className="flex items-center justify-center flex-col lg:flex-row">
         <div>
           <div className="relative w-[250px] h-[250px] mb-[20px]">
@@ -63,7 +64,7 @@ const ExperienceCard: React.VFC<ExperienceCardProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </GlassCard>
   );
 };
 
@@ -71,10 +72,10 @@ const Experience: React.VFC = () => {
   return (
     <div className="py-[90px] min-h-[100vh]">
       <div className="pt-[20px] lg:pb-[100px]">
-        <p className="text-center text-[22px] md:text-[32px] py-[20px] md:pt-[40px]">
+        <p className="text-center text-[22px] md:text-[32px] py-[20px] md:pt-[40px] relative z-10">
           ポートフォリオ
         </p>
-        <div className="flex items-center justify-center flex-col py-[30px]">
+        <div className="flex items-center justify-center gap-[100px] flex-col py-[30px]">
           {products.map((product) => (
             <div key={product.title}>
               <ExperienceCard
