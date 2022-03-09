@@ -64,11 +64,11 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-[20px]">
+          {/* <div className="absolute bottom-[20px]">
             <p className="text-[25px] lg:text-[40px] animate-bounce">
               ↓ scroll
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="mt-[50px] pb-[90px]">
