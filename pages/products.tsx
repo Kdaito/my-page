@@ -5,6 +5,7 @@ import { BsGithub } from "react-icons/bs";
 import { useCallback } from "react";
 import { products } from "../data";
 import GlassCard from "../components/GlassCard";
+import Head from "../components/Head";
 
 type ExperienceCardProps = {
   title: string;
@@ -70,27 +71,30 @@ const ExperienceCard: React.VFC<ExperienceCardProps> = ({
 
 const Experience: React.VFC = () => {
   return (
-    <div className="py-[90px] min-h-[100vh]">
-      <div className="pt-[20px] lg:pb-[100px]">
-        <p className="text-center text-[22px] md:text-[32px] py-[20px] md:pt-[40px] relative z-10">
-          ポートフォリオ
-        </p>
-        <div className="flex items-center justify-center gap-[100px] flex-col py-[30px]">
-          {products.map((product) => (
-            <div key={product.title}>
-              <ExperienceCard
-                title={product.title}
-                tags={product.tags}
-                discription={product.discription}
-                imageSrc={product.imageSrc}
-                url={product.url}
-                githubUrl={product.githubUrl}
-              />
-            </div>
-          ))}
+    <>
+      <Head title="products" />
+      <div className="py-[90px] min-h-[100vh]">
+        <div className="pt-[20px] lg:pb-[100px]">
+          <p className="text-center text-[22px] md:text-[32px] py-[20px] md:pt-[40px] relative z-10">
+            ポートフォリオ
+          </p>
+          <div className="flex items-center justify-center gap-[100px] flex-col py-[30px]">
+            {products.map((product) => (
+              <div key={product.title}>
+                <ExperienceCard
+                  title={product.title}
+                  tags={product.tags}
+                  discription={product.discription}
+                  imageSrc={product.imageSrc}
+                  url={product.url}
+                  githubUrl={product.githubUrl}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

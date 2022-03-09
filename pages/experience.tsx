@@ -1,4 +1,5 @@
 import GlassCard from "../components/GlassCard";
+import Head from "../components/Head";
 import TagChip from "../components/TagChip";
 
 type ExperienceCardProps = {
@@ -41,29 +42,32 @@ const ExperienceCard: React.VFC<ExperienceCardProps> = ({
 
 const Experience: React.VFC = () => {
   return (
-    <div className="pt-[90px] min-h-[100vh]">
-      <div className="pt-[20px] lg:pb-[100px]">
-        <p className="text-center text-[22px] md:text-[32px] py-[20px] md:pt-[40px] relative z-10">
-          インターン実績
-        </p>
-        <div className="flex items-center justify-center flex-col py-[30px]">
-          <ExperienceCard
-            companyName="イーストフィールズ株式会社"
-            tags={[
-              "Vue.js",
-              "React.js",
-              "Next.js",
-              "Tailwind.css",
-              "Firebase",
-              "Algolia",
-            ]}
-            discription="長期インターン生として、大学二年生の春頃から現在に至るまで修行中です。Vue.jsとFirebaseを使用したマッチングプラットフォーム開発や、React.jsとFirebaseを使用した人材管理アプリ開発に携わっております。また、最近ではNext.jsを使用したテックブログの作成に参画しております。"
-            startDate="2021-05-25"
-            endDate={null}
-          />
+    <>
+      <Head title="experience" />
+      <div className="pt-[90px] min-h-[100vh]">
+        <div className="pt-[20px] lg:pb-[100px]">
+          <p className="text-center text-[22px] md:text-[32px] py-[20px] md:pt-[40px] relative z-10">
+            インターン実績
+          </p>
+          <div className="flex items-center justify-center flex-col py-[30px]">
+            <ExperienceCard
+              companyName="イーストフィールズ株式会社"
+              tags={[
+                "Vue.js",
+                "React.js",
+                "Next.js",
+                "Tailwind.css",
+                "Firebase",
+                "Algolia",
+              ]}
+              discription="長期インターン生として、大学二年生の春頃から現在に至るまで修行中です。Vue.jsとFirebaseを使用したマッチングプラットフォーム開発や、React.jsとFirebaseを使用した人材管理アプリ開発に携わっております。また、最近ではNext.jsを使用したテックブログの作成に参画しております。"
+              startDate="2021-05-25"
+              endDate={null}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

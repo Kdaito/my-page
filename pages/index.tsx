@@ -1,6 +1,7 @@
 // import type { NextPage } from "next";
 import Image from "next/image";
 import GlassCard from "../components/GlassCard";
+import Head from "../components/Head";
 import { histories } from "../data";
 // import { client } from "../lib/client";
 // import { formatDate } from "../lib/date";
@@ -47,10 +48,13 @@ export const getStaticProps = async () => {
 const Home: React.VFC<Props> = ({ historyDatas }) => {
   return (
     <>
+      <Head title="home" />
       <div className="pt-[90px] h-[100vh]">
         <div className="flex items-center justify-between lg:justify-center flex-col-reverse lg:flex-row relative h-full">
           <div className="mt-[40px] text-center mb-[250px] lg:my-0 lg:mr-[90px]">
-            <h2 className="font-bold text-[36px] md:text-[70px]">Kobayashi Hiroto</h2>
+            <h2 className="font-bold text-[36px] md:text-[70px]">
+              Kobayashi Hiroto
+            </h2>
             <p className="text-[21px] md:text-[33px]">Welcome to my page !</p>
           </div>
           <div className={styles.iconContainer}>
@@ -61,7 +65,9 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
             </div>
           </div>
           <div className="absolute bottom-[20px]">
-            <p className="text-[25px] lg:text-[40px] animate-bounce">↓ scroll</p>
+            <p className="text-[25px] lg:text-[40px] animate-bounce">
+              ↓ scroll
+            </p>
           </div>
         </div>
       </div>
