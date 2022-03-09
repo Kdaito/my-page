@@ -13,15 +13,19 @@
       border-radius: 19% 81% 34% 66% / 20% 71% 29% 80%;
       width: 200px;
       height: 300px;
-      background: radial-gradient(circle at -20% -20%, #79ff98,#79ffe4, #78ceff, #7881ff, #bb77ff,#ff77f6 );
+      background: radial-gradient(
+        circle at -20% -20%,
+        #79ff98,
+        #79ffe4,
+        #78ceff,
+        #7881ff,
+        #bb77ff,
+        #ff77f6
+      );
       z-index: -1;
       position: absolute;
       top: 120px;
       left: 45px;
-      transition: all 0.3s;
-    }
-    &:hover::after {
-      transform: scale(1.2, 1.2);
       transition: all 0.3s;
     }
     .icon {
@@ -32,12 +36,11 @@
   }
 }
 
-
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   /*　md　*/
-  .iconContainer{
+  .iconContainer {
     padding-top: 190px;
-    .iconImageWrapper{
+    .iconImageWrapper {
       width: 450px;
       height: 500px;
       &::after {
@@ -50,11 +53,11 @@
     }
   }
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   /*　lg　*/
-  .iconContainer{
+  .iconContainer {
     padding-top: 50px;
-    .iconImageWrapper{
+    .iconImageWrapper {
       width: 350px;
       height: 400px;
       &::after {
@@ -63,6 +66,10 @@
         height: 400px;
         top: 45px;
         left: 10px;
+      }
+      &:hover::after {
+        transform: scale(1.2, 1.2);
+        transition: all 0.3s;
       }
     }
   }

@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Script id="show-banner" strategy="lazyOnload">
-        {`var vh =window.innerHeight; document.getElementById('background').style.height=vh+'px';`}
+        {`var oh =window.outerHeight; document.getElementById('background').style.minHeight=oh+'px';`}
       </Script>
       <div
         id="background"
