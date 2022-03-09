@@ -50,7 +50,7 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
     <>
       <Head title="home" />
       <div className="pt-[90px] h-[100vh]">
-        <div className="flex items-center justify-between lg:justify-center flex-col-reverse lg:flex-row relative h-full">
+        <div className="flex items-center justify-center flex-col-reverse lg:flex-row relative h-full">
           <div className="mt-[40px] text-center mb-[250px] lg:my-0 lg:mr-[90px]">
             <h2 className="font-bold text-[36px] md:text-[70px]">
               Kobayashi Hiroto

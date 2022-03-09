@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Script from "next/script";
 import { useCallback, useMemo, useState } from "react";
 
 type HeaderButton = {
@@ -41,16 +42,16 @@ const Header: React.VFC = () => {
   );
 
   const drawerScale = useMemo(
-    () => (isDrawerOpen ? "top-[90px]" : "top-[-2000px]"),
+    () => (isDrawerOpen ? "top-[60px] md:top-[90px]" : "top-[-2000px]"),
     [isDrawerOpen]
   );
 
   return (
     <>
-      <div className="fixed z-[9999] backdrop-blur-md bg-[#738287]/[.25] shadow-[2px_8px_8px_rgba(0,0,0,0.3)] w-full h-[90px]">
+      <div className="fixed z-[9999] backdrop-blur-md bg-[#738287]/[.25] shadow-[2px_8px_8px_rgba(0,0,0,0.3)] w-full h-[60px] md:h-[90px]">
         <div className="h-full w-[80%] max-w-[1280px] mx-auto flex items-center justify-between">
           <button className="px-[15px] py-[5px]">
-            <h1 className="text-[32px] font-medium">Kobayashi</h1>
+            <h1 className="text-[26px] md:text-[32px] font-medium">K.Hiroto</h1>
           </button>
           <div className="hidden w-[500px] lg:flex items-center justify-between">
             <HeaderButton path="/">Profile</HeaderButton>
@@ -59,12 +60,12 @@ const Header: React.VFC = () => {
             <HeaderButton path="/products">Products</HeaderButton>
           </div>
           <button
-            className="border border-humberger lg:hidden w-[68px] h-[50px] rounded-md flex items-center justify-between flex-col py-[9px] px-[9px]"
+            className="border border-humberger lg:hidden w-[48px] h-[40px] rounded-md flex items-center justify-between flex-col py-[9px] px-[9px]"
             onClick={() => toggleModal()}
           >
-            <div className="w-[90%] h-[4px] bg-humberger" />
-            <div className="w-[90%] h-[4px] bg-humberger" />
-            <div className="w-[90%] h-[4px] bg-humberger" />
+            <div className="w-[90%] h-[2px] bg-humberger" />
+            <div className="w-[90%] h-[2px] bg-humberger" />
+            <div className="w-[90%] h-[2px] bg-humberger" />
           </button>
         </div>
       </div>
