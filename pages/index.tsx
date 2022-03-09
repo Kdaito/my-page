@@ -48,10 +48,10 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
   return (
     <>
       <div className="pt-[90px] h-[100vh]">
-        <div className="flex items-center justify-between lg:justify-center flex-col-reverse lg:flex-row pt-[80px] md:pt-[150px] relative">
+        <div className="flex items-center justify-between lg:justify-center flex-col-reverse lg:flex-row relative h-full">
           <div className="mt-[40px] text-center mb-[250px] lg:my-0 lg:mr-[90px]">
-            <h2 className="text-[36px]">Kobayashi Hiroto</h2>
-            <p className="text-[21px]">Welcome to my page !</p>
+            <h2 className="font-bold text-[36px] md:text-[70px]">Kobayashi Hiroto</h2>
+            <p className="text-[21px] md:text-[33px]">Welcome to my page !</p>
           </div>
           <div className={styles.iconContainer}>
             <div className={styles.iconImageWrapper}>
@@ -60,8 +60,8 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-0 lg:bottom-[-140px]">
-            <p className="text-[25px] animate-bounce">↓ scroll</p>
+          <div className="absolute bottom-[20px]">
+            <p className="text-[25px] lg:text-[40px] animate-bounce">↓ scroll</p>
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
             </div>
           </GlassCard>
         </div>
-        <div className="w-full h-full flex items-center justify-center mt-[40px]">
+        <div className="w-full h-full flex items-center justify-center mt-[100px] lg:mt-[140px]">
           <GlassCard className="w-[350px] md:w-[700px] lg:w-[1000px] flex items-center justify-center flex-col py-[50px] md:px-[20px] lg:px-[150px]">
             <h2 className="text-[32px]">History</h2>
             <dl className="px-[30px] w-full">

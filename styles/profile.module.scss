@@ -1,5 +1,5 @@
 .iconContainer {
-  padding-top: 20px;
+  padding-top: 120px;
   position: relative;
   transform: translateX(-10px);
   display: inline-block;
@@ -13,10 +13,10 @@
       border-radius: 19% 81% 34% 66% / 20% 71% 29% 80%;
       width: 200px;
       height: 300px;
-      background-color: #00ff00;
+      background: radial-gradient(circle at -20% -20%, #79ff98,#79ffe4, #78ceff, #7881ff, #bb77ff,#ff77f6 );
       z-index: -1;
       position: absolute;
-      top: 20px;
+      top: 120px;
       left: 45px;
       transition: all 0.3s;
     }
@@ -28,6 +28,42 @@
       width: 100%;
       height: 100%;
       position: relative;
+    }
+  }
+}
+
+
+@media screen and (min-width:768px) {
+  /*　md　*/
+  .iconContainer{
+    padding-top: 190px;
+    .iconImageWrapper{
+      width: 450px;
+      height: 500px;
+      &::after {
+        content: "";
+        width: 450px;
+        height: 550px;
+        top: 145px;
+        left: 30px;
+      }
+    }
+  }
+}
+@media screen and (min-width:1024px) {
+  /*　lg　*/
+  .iconContainer{
+    padding-top: 50px;
+    .iconImageWrapper{
+      width: 350px;
+      height: 400px;
+      &::after {
+        content: "";
+        width: 350px;
+        height: 400px;
+        top: 45px;
+        left: 10px;
+      }
     }
   }
 }
