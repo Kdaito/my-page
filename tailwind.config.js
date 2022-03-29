@@ -5,11 +5,11 @@ module.exports = {
   ],
   theme: {
     colors: {
-      "background-header": "#000022",
+      "header": "#0A1A2E",
       "background-footer": "#222",
-      "background-main": "#000022",
+      "main": "#0A1A2E",
       "border": "#686868",
-      "point-main": "#00ff00",
+      "point-main": "#ff9e3d",
       "card": "#222",
       "chip" : "rgba(75, 115, 115, 0.4)",
       "humberger" : "#fff",

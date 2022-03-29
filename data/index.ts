@@ -54,30 +54,30 @@ type Historys = {
 export const histories: Historys = [
   {
     id: "4",
-    title: "高校進学",
+    title: "Entrance to highschool",
     year: "2017-04-01",
     contents:
-      "愛知県の県立高校に進学。サッカー部に所属。この頃は特に将来の事を考えることはなく、来たる大学受験と成人に少々怯えながらも、毎日部活、勉強に励んでいた。毎週水曜日にあるランメニューが最高のストレスで、今思い出しても嫌な気持ちになる。",
+      "I entered pubilc highschool in Aichi prefecture in 2017. I joined scoocer club in high school, because I have been playing it since I was a child. During my highschool days, I studied hard and played soccer with so much effort. Meanwhile, my future vision was unclear because I was not sure what I want to do at that time. Although I loved playing soccer, I really hated running training every Wednesday in soccer club. Even now, I'm getting nurvous when I remenber it.",
   },
   {
     id: "3",
-    title: "大学進学",
+    title: "Entrance to University",
     year: "2020-04-01",
     contents:
-      "滋賀大学に進学。入学時には具体的な目標ややりたいことがなく、「俺は一人で静かに過ごしたいぜ」とこじらせてしまい部活にもサークルにも参加しなかった。また、コロナ禍で大学がオンラインになったことも重なり、ぼっち大学生に。一年生の秋頃から約一年間居酒屋のバイトをして人見知りを克服した。",
+      "I entered Shiga University in 2020. I didn't join any club acrivities or groups, because, these days, I did'nt have a specific goal, and I wanted to value my alone time to find it. In addition to these, I became completely alone because of COVID-19 pandemic. By the way, I overcomed severe shyness by working Izakaya(Japanese style pub), in those days.",
   },
   {
     id: "2",
-    title: "プログラミングスクール入学",
+    title: "Studying at Programming School",
     year: "2020-11-01",
     contents:
-      "一年生の夏頃に、学校の授業で触れたことをきっかけにプログラミングの勉強を開始。ぼっち大学生になったことが功を奏し、ほとんどの時間をプログラミングの勉強に費やす。本格的にプログラミングを学びたいと思い、秋頃にスクールに入学する。この頃からwebエンジニアになりたいという目標を持つようになる。",
+      "I began to studying programming, because I heard Profeccer saying about it at a class in my first year University student. Thanks to my loneliness, I spend most of my time to study programming. I entered an online programming school in the autumn of this year, because I wanted to study it more seriously. From this time, I setted a goal to become a web developer.",
   },
   {
     id: "1",
-    title: "長期インターン開始",
+    title: "Start working as a web developer",
     year: "2021-05-25",
     contents:
-      "約四ヶ月の学習期間を終えて、スクールを卒業。実務経験を求めて長期就業型インターンを探し始める。ここでイーストフィールズ株式会社様に拾っていただき、念願のwebエンジニアとしての長期インターン開始。主にフロントエンドを中心に開発に従事。",
+      "I graduated programming school after finishing online curriculum for about 4 month. After then, I was looking for some internships which is related to web development, and I start working Eastfields.Co., Ltd. as a web developer in May 2021. I mainly develop front-end at there.",
   },
 ];

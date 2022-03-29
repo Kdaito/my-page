@@ -1,11 +1,7 @@
 // import type { NextPage } from "next";
 import Image from "next/image";
-import GlassCard from "../components/GlassCard";
 import Head from "../components/Head";
 import { histories } from "../data";
-// import { client } from "../lib/client";
-// import { formatDate } from "../lib/date";
-import styles from "../styles/profile.module.scss";
 
 type HistoryProps = {
   label: string;
@@ -25,10 +21,12 @@ type Props = {
 };
 
 const History: React.VFC<HistoryProps> = ({ label, contents, year }) => (
-  <dd className="relative md:ml-[140px] border-l-[3px] py-[40px] lg:py-[60px] pl-[20px] before:content-[''] before:h-[20px] before:w-[20px] before:bg-text before:absolute before:rounded-[100%] before:left-[-11px]">
-    <p className="md:absolute md:left-[-110px]">{year}</p>
-    <p className="text-[21px] mt-[2px] md:mt-0 mb-[7px]">{label}</p>
-    <p className="mt-[15px] leading-7 tracking-wide">{contents}</p>
+  <dd className="relative lg:ml-[60px] border-l-[1px] border-text/[0.5] py-[40px] md:py-[60px] lg:py-[40px] pl-[20px] lg:pl-[50px]">
+    <p className="absolute bg-point-main text-main font-bold text-[17px] top-0 left-[-10px] lg:top-[20px] lg:left-[-100px] px-[20px] py-[3px] rounded">
+      {year}
+    </p>
+    <p className="text-[25px] font-medium text-text/[0.8] tracking-wide relative">{label}</p>
+    <p className="mt-[15px] leading-7 tracking-wide text-text/[0.6]">{contents}</p>
   </dd>
 );
 
@@ -47,74 +45,78 @@ export const getStaticProps = async () => {
 
 const Home: React.VFC<Props> = ({ historyDatas }) => {
   return (
-    <>
-      <Head title="home" />
-      <div className="pt-[90px] h-[100vh]">
-        <div className="flex items-center justify-center flex-col-reverse lg:flex-row relative h-full">
-          <div className="mt-[40px] text-center mb-[250px] lg:my-0 lg:mr-[90px]">
-            <h2 className="font-bold text-[36px] md:text-[70px]">
-              Kobayashi Hiroto
-            </h2>
-            <p className="text-[21px] md:text-[33px]">Welcome to my page !</p>
-          </div>
-          <div className={styles.iconContainer}>
-            <div className={styles.iconImageWrapper}>
-              <div className={styles.icon}>
-                <Image src="/icon.jpg" alt="icon" layout="fill" />
-              </div>
-            </div>
-          </div>
-          {/* <div className="absolute bottom-[20px]">
-            <p className="text-[25px] lg:text-[40px] animate-bounce">
-              ↓ scroll
+    <div className="overflow-hidden">
+      <Head title="Profile" />
+      {/* heading */}
+      <div className="h-[100vh]">
+        <div className="w-[100%] md:w-[600px] lg:w-[1000px] mx-auto h-full flex flex-col items-start justify-center px-[30px] md:px-0 pt-[50px]">
+          <p className="md:text-[17px] lg:text-[20px] text-point-main tracking-widest">
+            Hi, My name is
+          </p>
+          <h1 className="text-[50px] md:text-[60px] lg:text-[74px] text-text/[0.9] font-bold tracking-wide">
+            Kobayashi Hiroto.
+          </h1>
+          <p className="text-[25px] md:text-[30px] lg:text-[35px] mt-[25px] lg:mt-0 text-text/[0.6] font-medium tracking-wide">
+            文系大学生 × WEBエンジニア
+          </p>
+          <p className="mt-[20px] lg:mt-[10px] mb-[35px] lg:my-[35px] text-text/[0.4] lg:w-[500px] tracking-wide">
+            Welcome to my portfolio! I am a student at Shiga University and a
+            web developer specializing in front-end. I created this page myself
+            using Next.js. I also created my blog, so, please check out there,
+            too!
+          </p>
+          <a href="https://my-blog-kdaito.vercel.app/" className="border border-point-main rounded text-point-main px-[30px] py-[10px] lg:hover:bg-point-main lg:hover:text-main duration-200">
+            check out my blog!
+          </a>
+        </div>
+      </div>
+      {/* profile */}
+      <div className="w-[100%] md:w-[600px] lg:w-[800px] px-[30px] md:px-0 mx-auto mt-[100px]">
+        <h2 className="w-[100%] lg:w-[70%] text-[20px] lg:text-[32px] font-bold mb-[40px] lg:mb-[50px] flex items-center after:h-[1px] after:grow after:bg-text/[0.3] after:ml-[15px] lg:after:ml-[30px]">
+          <span className="text-point-main">A</span>bout me
+        </h2>
+        <div className="w-full flex flex-col-reverse md:flex-col lg:flex-row gap-[60px] lg:gap-[40px]">
+          <div className="flex-1 tracking-wide leading-8 text-[17px] text-text/[0.8]">
+            <p>
+              Hello! Thank you for visiting my portfolio! My name is <span className="text-point-main">Kobayashi
+              Hiroto</span>. After graduating from highschool in Aichi, I became a college student and living alone in Hikone, Shiga
+              Prefecture in Japan.
             </p>
-          </div> */}
+            <p className="py-[15px]">My interest in <span className="text-point-main">Web development</span> started when I was 19 year&apos;s old. After then, I&apos;ve been studying programming to become a web developer.</p>
+            <p>Now, I&apos;m working at a startup company in Tokyo as a forntend web developer. In there, I develop web applications with <span className="text-point-main">Vue.js</span>, <span className="text-point-main">React.js</span>, <span className="text-point-main">Next.js</span>, and so on.</p>
+          </div>
+          <div className="h-[250px] w-[250px] md:h-[300px] md:w-[300px] ml-[35px] md:mx-auto lg:ml-0 bg-point-main relative after:w-[250px] md:after:w-[300px] after:h-[250px] md:after:h-[300px] after:absolute after:top-[20px] after:border-[3px] after:border-point-main after:left-[20px] after:z-[-1]">
+            <Image
+              src="/profile.jpg"
+              alt="profile icon"
+              layout="fill"
+              objectFit="cover"
+              className="opacity-70"
+            />
+          </div>
         </div>
       </div>
-      <div className="mt-[50px] pb-[90px]">
-        <div className="w-full h-full flex items-center justify-center">
-          <GlassCard className="w-[350px] md:w-[700px] lg:w-[1000px] flex items-center justify-center flex-col py-[50px] md:px-[70px] lg:px-[150px]">
-            <h2 className="text-[32px]">Profile</h2>
-            <div className="flex items-center justify-between flex-col md:flex-row text-center">
-              <div className="py-[30px]">
-                <div className="h-[250px] md:h-[200px] w-[250px] md:w-[200px] relative rounded-[100%] overflow-hidden">
-                  <Image
-                    src="/profile.jpg"
-                    alt="profile icon"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <p className="text-[30px] mt-[30px] lg:mt-[10px]">小林 大斗</p>
-                <p className="text-[19px] tracking-wider">kobayashi hiroto</p>
-                <p className="text-[17px] mt-[15px]">愛知県出身・20歳</p>
-              </div>
-              <div className="px-[32px] md:pr-0 lg:pl-[60px]">
-                <p className="text-[17px] leading-8 tracking-wider text-left">
-                  愛知県の高校を卒業したのち、進学に伴い滋賀県彦根市で一人暮らしを始める。部活もサークルも特にやっていなかったので暇を埋めるためにプログラミングを始めた。その後何やかんやで事が進み、現在は東京の企業で長期インターン生として、主にフロントエンドを中心に開発を行なっている。夢はWEBエンジニアになることである。
-                </p>
-              </div>
+      {/* history */}
+      <div className="w-[100%] md:w-[600px] lg:w-[800px] px-[30px] md:px-0 mx-auto my-[150px] md:my-[300px]">
+        <h2 className="w-[100%] lg:w-[80%] text-[20px] lg:text-[32px] font-bold mb-[40px] lg:mb-[50px] lg:ml-auto flex items-center after:h-[1px] after:grow md:after:grow-0 after:bg-text/[0.3] after:ml-[15px] md:after:ml-0 before:h-[1px] md:before:grow before:bg-text/[0.3] md:before:mr-[30px]">
+          <span className="text-point-main">H</span>istory
+        </h2>
+        <p className="text-center md:text-right lg:pr-[100px] text-text/[0.7]">
+          You can see my main Career, here.
+        </p>
+        <dl className="px-[15px] lg:px-[30px] w-full mx-auto mt-[40px] md:mt-[100px]">
+          {historyDatas.map((date) => (
+            <div key={date.id}>
+              <History
+                label={date.title}
+                year={date.year}
+                contents={date.contents}
+              />
             </div>
-          </GlassCard>
-        </div>
-        <div className="w-full h-full flex items-center justify-center mt-[100px] lg:mt-[140px]">
-          <GlassCard className="w-[350px] md:w-[700px] lg:w-[1000px] flex items-center justify-center flex-col py-[50px] md:px-[20px] lg:px-[150px]">
-            <h2 className="text-[32px]">History</h2>
-            <dl className="px-[30px] w-full">
-              {historyDatas.map((date) => (
-                <div key={date.id}>
-                  <History
-                    label={date.title}
-                    year={date.year}
-                    contents={date.contents}
-                  />
-                </div>
-              ))}
-            </dl>
-          </GlassCard>
-        </div>
+          ))}
+        </dl>
       </div>
-    </>
+    </div>
   );
 };
 
