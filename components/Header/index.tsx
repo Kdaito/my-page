@@ -62,7 +62,7 @@ const Header: React.VFC = () => {
               <span className="text-point-main">E</span>xperience
             </HeaderButton>
             <HeaderButton path="/products">
-              <span className="text-point-main">P</span>roducts
+              <span className="text-point-main">P</span>ortfolio
             </HeaderButton>
           </div>
           <button
@@ -101,7 +101,7 @@ const Header: React.VFC = () => {
             className="text-[32px] w-full py-[20px]"
             onClick={() => onClickDrawer("/products")}
           >
-            <span className="text-point-main">P</span>roducts
+            <span className="text-point-main">P</span>ortfolio
           </button>
         </div>
         <button

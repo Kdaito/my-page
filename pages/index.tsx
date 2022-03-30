@@ -25,8 +25,12 @@ const History: React.VFC<HistoryProps> = ({ label, contents, year }) => (
     <p className="absolute bg-point-main text-main font-bold text-[17px] top-0 left-[-10px] lg:top-[20px] lg:left-[-100px] px-[20px] py-[3px] rounded">
       {year}
     </p>
-    <p className="text-[25px] font-medium text-text/[0.8] tracking-wide relative">{label}</p>
-    <p className="mt-[15px] leading-7 tracking-wide text-text/[0.6]">{contents}</p>
+    <p className="text-[25px] font-medium text-text/[0.8] tracking-wide relative">
+      {label}
+    </p>
+    <p className="mt-[15px] leading-7 tracking-wide text-text/[0.6]">
+      {contents}
+    </p>
   </dd>
 );
 
@@ -45,7 +49,7 @@ export const getStaticProps = async () => {
 
 const Home: React.VFC<Props> = ({ historyDatas }) => {
   return (
-    <div className="overflow-hidden">
+    <>
       <Head title="Profile" />
       {/* heading */}
       <div className="h-[100vh]">
@@ -65,7 +69,10 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
             using Next.js. I also created my blog, so, please check out there,
             too!
           </p>
-          <a href="https://my-blog-kdaito.vercel.app/" className="border border-point-main rounded text-point-main px-[30px] py-[10px] lg:hover:bg-point-main lg:hover:text-main duration-200">
+          <a
+            href="https://my-blog-kdaito.vercel.app/"
+            className="border border-point-main rounded text-point-main px-[30px] py-[10px] lg:hover:bg-point-main lg:hover:text-main duration-200"
+          >
             check out my blog!
           </a>
         </div>
@@ -78,12 +85,24 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
         <div className="w-full flex flex-col-reverse md:flex-col lg:flex-row gap-[60px] lg:gap-[40px]">
           <div className="flex-1 tracking-wide leading-8 text-[17px] text-text/[0.8]">
             <p>
-              Hello! Thank you for visiting my portfolio! My name is <span className="text-point-main">Kobayashi
-              Hiroto</span>. After graduating from highschool in Aichi, I became a college student and living alone in Hikone, Shiga
-              Prefecture in Japan.
+              Hello! Thank you for visiting my portfolio! My name is{" "}
+              <span className="text-point-main">Kobayashi Hiroto</span>. After
+              graduating from highschool in Aichi, I became a college student
+              and living alone in Hikone, Shiga Prefecture in Japan.
             </p>
-            <p className="py-[15px]">My interest in <span className="text-point-main">Web development</span> started when I was 19 year&apos;s old. After then, I&apos;ve been studying programming to become a web developer.</p>
-            <p>Now, I&apos;m working at a startup company in Tokyo as a forntend web developer. In there, I develop web applications with <span className="text-point-main">Vue.js</span>, <span className="text-point-main">React.js</span>, <span className="text-point-main">Next.js</span>, and so on.</p>
+            <p className="py-[15px]">
+              My interest in{" "}
+              <span className="text-point-main">Web development</span> started
+              when I was 19 year&apos;s old. After then, I&apos;ve been studying
+              programming to become a web developer.
+            </p>
+            <p>
+              Now, I&apos;m working at a startup company in Tokyo as a forntend
+              web developer. In there, I develop web applications with{" "}
+              <span className="text-point-main">Vue.js</span>,{" "}
+              <span className="text-point-main">React.js</span>,{" "}
+              <span className="text-point-main">Next.js</span>, and so on.
+            </p>
           </div>
           <div className="h-[250px] w-[250px] md:h-[300px] md:w-[300px] ml-[35px] md:mx-auto lg:ml-0 bg-point-main relative after:w-[250px] md:after:w-[300px] after:h-[250px] md:after:h-[300px] after:absolute after:top-[20px] after:border-[3px] after:border-point-main after:left-[20px] after:z-[-1]">
             <Image
@@ -98,7 +117,7 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
       </div>
       {/* history */}
       <div className="w-[100%] md:w-[600px] lg:w-[800px] px-[30px] md:px-0 mx-auto my-[150px] md:my-[300px]">
-        <h2 className="w-[100%] lg:w-[80%] text-[20px] lg:text-[32px] font-bold mb-[40px] lg:mb-[50px] lg:ml-auto flex items-center after:h-[1px] after:grow md:after:grow-0 after:bg-text/[0.3] after:ml-[15px] md:after:ml-0 before:h-[1px] md:before:grow before:bg-text/[0.3] md:before:mr-[30px]">
+        <h2 className="w-[100%] lg:w-[80%] text-[20px] lg:text-[32px] font-bold mb-[40px] lg:mb-[50px] lg:ml-auto lg:pr-[50px] flex items-center after:h-[1px] after:grow md:after:grow-0 after:bg-text/[0.3] after:ml-[15px] md:after:ml-0 before:h-[1px] md:before:grow before:bg-text/[0.3] md:before:mr-[30px]">
           <span className="text-point-main">H</span>istory
         </h2>
         <p className="text-center md:text-right lg:pr-[100px] text-text/[0.7]">
@@ -116,7 +135,7 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
           ))}
         </dl>
       </div>
-    </div>
+    </>
   );
 };
 
