@@ -10,7 +10,7 @@ module.exports = {
       "main": "#0A1A2E",
       "border": "#686868",
       "point-main": "#ff9e3d",
-      "card": "#222",
+      "card": "#2f2f2f",
       "chip" : "rgba(75, 115, 115, 0.4)",
       "humberger" : "#fff",
       "drawer": "#222",

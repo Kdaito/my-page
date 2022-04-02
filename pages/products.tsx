@@ -101,13 +101,13 @@ const Experience: React.VFC = () => {
           <div className="w-full flex flex-col-reverse md:flex-col lg:flex-row gap-[60px] lg:gap-[40px]">
             <div className="flex-1 tracking-wide leading-8 text-[17px] text-text/[0.8]">
               <p>
-                I&apos;ll show you some{" "}
+                In this page, I&apos;ll show you some{" "}
                 <span className="text-point-main">my portfolio</span> that I
-                have created so far, in this page. I deployed most of them, so
-                please check out them.
+                have created so far. I deployed most of them, so please check
+                out them.
               </p>
               <p className="py-[15px]">
-                I&apos;ll introduce them with{" "}
+                I&apos;ll introduce them using{" "}
                 <span className="text-point-main">Japanese</span> because I can
                 explain them more crealy than using my poor English. Each of
                 them has link of{" "}

@@ -64,7 +64,7 @@ export const histories: Historys = [
     title: "Entrance to University",
     year: "2020-04-01",
     contents:
-      "I entered Shiga University in 2020. I didn't join any club acrivities or groups, because, these days, I did'nt have a specific goal, and I wanted to value my alone time to find it. In addition to these, I became completely alone because of COVID-19 pandemic. By the way, I overcomed severe shyness by working Izakaya(Japanese style pub), in those days.",
+      "I entered Shiga University in 2020. I haven't joined any club acrivities or associations because my priority was to find out what I want to do in the future. In addition to this, COVID-19 made me completely alone. I started working part-time at Izakaya (Japanese style pub) which helped me overcome my shyness",
   },
   {
     id: "2",
