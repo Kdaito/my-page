@@ -51,15 +51,12 @@ const Header: React.VFC = () => {
       <div className="fixed z-[9999] backdrop-blur-md background-header w-full h-[60px] md:h-[90px]">
         <div className="h-full w-full md:w-[80%] px-[30px] max-w-[1280px] mx-auto flex items-center justify-between">
           <h1 className="text-[26px] md:text-[32px] font-medium">K.Hiroto</h1>
-          <div className="hidden w-[500px] lg:flex items-center justify-between">
+          <div className="hidden w-[400px] lg:flex items-center justify-between">
             <HeaderButton path="/">
               <span className="text-point-main">P</span>rofile
             </HeaderButton>
             <HeaderButton path="/skills">
               <span className="text-point-main">S</span>kills
-            </HeaderButton>
-            <HeaderButton path="/experience">
-              <span className="text-point-main">E</span>xperience
             </HeaderButton>
             <HeaderButton path="/products">
               <span className="text-point-main">P</span>ortfolio
@@ -78,7 +75,7 @@ const Header: React.VFC = () => {
       <div
         className={`z-[999] fixed left-0 w-full h-screen ${drawerScale} origin-center duration-500`}
       >
-        <div className="backdrop-blur-md bg-[#738287]/[.25] shadow-[2px_8px_8px_rgba(0,0,0,0.3)] w-full h-[500px] flex items-center justify-between flex-col py-[50px]">
+        <div className="backdrop-blur-md bg-[#738287]/[.25] shadow-[2px_8px_8px_rgba(0,0,0,0.3)] w-full h-[400px] flex items-center justify-between flex-col py-[50px]">
           <button
             className="text-[32px] w-full py-[20px]"
             onClick={() => onClickDrawer("/")}
@@ -90,12 +87,6 @@ const Header: React.VFC = () => {
             onClick={() => onClickDrawer("/skills")}
           >
             <span className="text-point-main">S</span>kills
-          </button>
-          <button
-            className="text-[32px] w-full py-[20px]"
-            onClick={() => onClickDrawer("/experience")}
-          >
-            <span className="text-point-main">E</span>xperience
           </button>
           <button
             className="text-[32px] w-full py-[20px]"
