@@ -83,7 +83,7 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
           <span className="text-point-main">A</span>bout me
         </h2>
         <div className="w-full flex flex-col-reverse md:flex-col lg:flex-row lg:gap-[40px]">
-          <div className="flex-1 tracking-wide leading-8 text-[17px] text-text/[0.8] pt-[60px] pt-0">
+          <div className="flex-1 tracking-wide leading-8 text-[17px] text-text/[0.8] pt-[60px] md:pt-0">
             <p>
               Hello! Thank you for visiting my portfolio! My name is{" "}
               <span className="text-point-main">Kobayashi Hiroto</span>. After
