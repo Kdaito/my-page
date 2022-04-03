@@ -101,19 +101,18 @@ const Experience: React.VFC = () => {
           <div className="w-full flex flex-col-reverse md:flex-col lg:flex-row gap-[60px] lg:gap-[40px]">
             <div className="flex-1 tracking-wide leading-8 text-[17px] text-text/[0.8]">
               <p>
-                In this page, I&apos;ll show you some{" "}
+                In this page, I&apos;ll show you some of{" "}
                 <span className="text-point-main">my portfolio</span> that I
-                have created so far. I deployed most of them, so please check
-                out them.
+                have created so far. I deployed most of them, so I whoud like
+                you to check them out.
               </p>
               <p className="py-[15px]">
-                I&apos;ll introduce them using{" "}
-                <span className="text-point-main">Japanese</span> because I can
-                explain them more crealy than using my poor English. Each of
-                them has link of{" "}
+                These portfolio would be introduced in{" "}
+                <span className="text-point-main">Japanese</span>, but each of
+                them has a link of{" "}
                 <span className="text-point-main">git hub</span> and their{" "}
-                <span className="text-point-main">page</span>, so please
-                checkout them, if you cannot read Japanese.
+                <span className="text-point-main">page</span>, so please take a
+                look at them, if you cannot understand Japanese.
               </p>
             </div>
             <div className="h-[250px] w-[250px] md:h-[300px] md:w-[300px] ml-[35px] md:mx-auto lg:ml-0 bg-point-main relative after:w-[250px] md:after:w-[300px] after:h-[250px] md:after:h-[300px] after:absolute after:top-[20px] after:border-[3px] after:border-point-main after:left-[20px] after:z-[-1]">

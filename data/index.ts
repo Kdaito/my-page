@@ -57,7 +57,7 @@ export const histories: Historys = [
     title: "Entrance to highschool",
     year: "2017-04-01",
     contents:
-      "I entered pubilc highschool in Aichi prefecture in 2017. I joined scoocer club in high school, because I have been playing it since I was a child. During my highschool days, I studied hard and played soccer with so much effort. Meanwhile, my future vision was unclear because I was not sure what I want to do at that time. Although I loved playing soccer, I really hated running training every Wednesday in soccer club. Even now, I'm getting nurvous when I remenber it.",
+      "I entered public highschool in Aichi prefecture in 2017. My high school days were one of the most wonderful moments I ever had in my life. During my highschool days, I studied hard everyday, and played soccer with so much effort. Meanwhile, my future vision was unclear because I was not sure what I want to do at that time. Although I loved playing soccer, I really hated running traning every Wednesday in soccer club. Even now, I'm getting nervous when I remenber it.",
   },
   {
     id: "3",
@@ -71,13 +71,13 @@ export const histories: Historys = [
     title: "Studying at Programming School",
     year: "2020-11-01",
     contents:
-      "I began to studying programming, because I heard Profeccer saying about it at a class in my first year University student. Thanks to my loneliness, I spend most of my time to study programming. I entered an online programming school in the autumn of this year, because I wanted to study it more seriously. From this time, I setted a goal to become a web developer.",
+      "I began to study programming because I heard professor saying about the potential of programming. Thanks to my loneliness (due to the pandemic), I spent most of my time to study programming. Also, I entered an online programming school in autumn of this year because I wanted to study it more seriously. Since then, I set a goal to become a web developer.",
   },
   {
     id: "1",
     title: "Start working as a web developer",
     year: "2021-05-25",
     contents:
-      "I graduated programming school after finishing online curriculum for about 4 month. After then, I was looking for some internships which is related to web development, and I start working Eastfields.Co., Ltd. as a web developer in May 2021. I mainly develop front-end at there.",
+      "I graduated from the programming school after finishing 4 months of online curriculum. After that, I was looking for some internships which is related to web development, and I started working at Eastfields.Co., Ltd. as a web developer in May 2021. I mainly develop front-end at there.",
   },
 ];
