@@ -93,7 +93,7 @@ const Experience: React.VFC = () => {
   return (
     <>
       <Head title="products" />
-      <div className="h-[100vh] pt-[90px] flex items-center justify-center w-[100%] md:w-[600px] lg:w-[800px] px-[30px] md:px-0 mx-auto">
+      <div className="h-[100vh] pt-[180px] sm:pt-[90px] flex items-center justify-center w-[100%] md:w-[600px] lg:w-[800px] px-[30px] md:px-0 mx-auto">
         <div>
           <h2 className="w-[100%] lg:w-[70%] text-[20px] lg:text-[32px] font-bold mb-[40px] lg:mb-[50px] flex items-center after:h-[1px] after:grow after:bg-text/[0.3] after:ml-[15px] lg:after:ml-[30px]">
             <span className="text-point-main">P</span>ortfolio
@@ -127,7 +127,7 @@ const Experience: React.VFC = () => {
           </div>
         </div>
       </div>
-      <div className="pt-[20px] lg:pt-[100px] pb-[100px]">
+      <div className="py-[100px]">
         <div className="w-[100%] md:w-[700px] px-[30px] lg:px-0 lg:w-[800px] mx-auto flex items-center justify-center gap-[60px] lg:gap-[150px] flex-col py-[30px]">
           {products.map((product, index) => (
             <div key={product.title} className="w-full">
