@@ -57,14 +57,14 @@ export const histories: Historys = [
     title: "Entrance to highschool",
     year: "2017-04-01",
     contents:
-      "I entered public highschool in Aichi prefecture in 2017. My high school days were one of the most wonderful moments I ever had in my life. During my highschool days, I studied hard everyday, and played soccer with so much effort. Meanwhile, my future vision was unclear because I was not sure what I want to do at that time. Although I loved playing soccer, I really hated running traning every Wednesday in soccer club. Even now, I'm getting nervous when I remenber it.",
+      "I entered public highschool in Aichi prefecture in 2017. My high school days were one of the most wonderful moments I ever had in my life. During my highschool days, I studied hard everyday, and played soccer with so much effort. Meanwhile, my future vision was unclear because I was not sure what I want to do at that time. Although I loved playing soccer, I really hated running training every Wednesday in soccer club. Even now, I'm getting nervous when I remenber it.",
   },
   {
     id: "3",
     title: "Entrance to University",
     year: "2020-04-01",
     contents:
-      "I entered Shiga University in 2020. I haven't joined any club acrivities or associations because my priority was to find out what I want to do in the future. In addition to this, COVID-19 made me completely alone. I started working part-time at Izakaya (Japanese style pub) which helped me overcome my shyness",
+      "I entered Shiga University in 2020. I haven't joined any club acrivities or associations because my priority was to find out what I want to do in the future. In addition to this, COVID-19 made me completely alone. In my first year of university, I started working part-time at Izakaya (Japanese style pub) which helped me overcome my shyness",
   },
   {
     id: "2",

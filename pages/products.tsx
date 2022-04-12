@@ -110,7 +110,7 @@ const Experience: React.VFC = () => {
                 These portfolio would be introduced in{" "}
                 <span className="text-point-main">Japanese</span>, but each of
                 them has a link of{" "}
-                <span className="text-point-main">git hub</span> and their{" "}
+                <span className="text-point-main">Git Hub</span> and their{" "}
                 <span className="text-point-main">page</span>, so please take a
                 look at them, if you cannot understand Japanese.
               </p>
