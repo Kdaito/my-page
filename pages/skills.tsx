@@ -18,7 +18,7 @@ const SkillCard: React.VFC<SkillCardProps> = ({
 }) => {
   const router = useRouter();
   return (
-    <button onClick={() => router.push(link)}>
+    <button data-aos="fade-up" onClick={() => router.push(link)}>
       <div className="relative w-full h-[310px] bg-card rounded-[20px] px-[20px] py-[40px] lg:hover:scale-105 duration-200">
         <div className="absolute top-[-60px] bg-card p-[10px] rounded-[50%] border-[15px] border-main">
           <div className="relative overflow-hidden rounded-[50%] w-[60px] h-[60px]">
@@ -41,7 +41,10 @@ const Skills: React.VFC = () => {
       <Head title="skills" />
       <div className="pt-[90px] min-h-[100vh]">
         <div className="w-[350px] md:w-[600px] px-[30px] lg:w-[800px] mx-auto py-[100px]">
-          <h2 className="mx-auto lg:w-[70%] text-[20px] lg:text-[32px] font-bold mb-[40px] lg:mb-[50px] flex items-center after:h-[1px] after:grow after:bg-text/[0.3] after:ml-[15px] lg:after:ml-[30px]">
+          <h2
+            data-aos="fade-up"
+            className="mx-auto lg:w-[70%] text-[20px] lg:text-[32px] font-bold mb-[40px] lg:mb-[50px] flex items-center after:h-[1px] after:grow after:bg-text/[0.3] after:ml-[15px] lg:after:ml-[30px]"
+          >
             <span className="text-point-main">L</span>anguage
           </h2>
           <div className="pt-[50px] grid gap-x-[30px] gap-y-[80px] md:grid-cols-2 lg:grid-cols-3">
@@ -66,7 +69,10 @@ const Skills: React.VFC = () => {
           </div>
         </div>
         <div className="w-[350px] md:w-[600px] px-[30px] lg:w-[800px] mx-auto py-[100px]">
-          <h2 className="mx-auto lg:w-[80%] text-[20px] lg:text-[32px] font-bold mb-[40px] lg:mb-[50px] lg:ml-auto lg:pr-[50px] flex items-center after:h-[1px] after:grow md:after:grow-0 after:bg-text/[0.3] after:ml-[15px] md:after:ml-0 before:h-[1px] md:before:grow before:bg-text/[0.3] md:before:mr-[30px]">
+          <h2
+            data-aos="fade-up"
+            className="mx-auto lg:w-[80%] text-[20px] lg:text-[32px] font-bold mb-[40px] lg:mb-[50px] lg:ml-auto lg:pr-[50px] flex items-center after:h-[1px] after:grow md:after:grow-0 after:bg-text/[0.3] after:ml-[15px] md:after:ml-0 before:h-[1px] md:before:grow before:bg-text/[0.3] md:before:mr-[30px]"
+          >
             <span className="text-point-main">L</span>ibrary or
             <span className="text-point-main pl-[10px]">F</span>lamework
           </h2>
@@ -116,7 +122,10 @@ const Skills: React.VFC = () => {
           </div>
         </div>
         <div className="w-[350px] md:w-[600px] px-[30px] lg:w-[800px] mx-auto py-[100px]">
-          <h2 className="mx-auto lg:w-[70%] text-[20px] lg:text-[32px] font-bold mb-[40px] lg:mb-[50px] flex items-center after:h-[1px] after:grow after:bg-text/[0.3] after:ml-[15px] lg:after:ml-[30px]">
+          <h2
+            data-aos="fade-up"
+            className="mx-auto lg:w-[70%] text-[20px] lg:text-[32px] font-bold mb-[40px] lg:mb-[50px] flex items-center after:h-[1px] after:grow after:bg-text/[0.3] after:ml-[15px] lg:after:ml-[30px]"
+          >
             <span className="text-point-main">O</span>thers
           </h2>
           <div className="pt-[50px] grid gap-x-[30px] gap-y-[80px] md:grid-cols-2 lg:grid-cols-3">

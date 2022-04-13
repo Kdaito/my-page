@@ -66,7 +66,7 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
             data-aos="fade-up"
             data-aos-offset="0"
             data-aos-delay="700"
-            className="text-[50px] md:text-[60px] lg:text-[74px] text-text/[0.9] font-bold tracking-wide"
+            className="text-[50px] md:text-[60px] lg:text-[74px] text-text/[0.9] font-bold md:tracking-wide"
           >
             Kobayashi Hiroto.
           </h1>
@@ -74,7 +74,7 @@ const Home: React.VFC<Props> = ({ historyDatas }) => {
             data-aos="fade-up"
             data-aos-offset="0"
             data-aos-delay="1400"
-            className="text-[25px] md:text-[30px] lg:text-[35px] mt-[25px] lg:mt-0 text-text/[0.6] font-medium tracking-wide"
+            className="text-[20px] md:text-[30px] lg:text-[35px] mt-[25px] lg:mt-0 text-text/[0.6] font-medium tracking-wide"
           >
             文系大学生 × WEBエンジニア
           </p>
