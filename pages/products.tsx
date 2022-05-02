@@ -64,7 +64,7 @@ const ExperienceCard: React.VFC<ExperienceCardProps> = ({
             <p className="text-[32px] tracking-widest">{title}</p>
           </div>
           <div className="lg:bg-main lg:w-[650px] p-[20px] md:p-[40px] lg:p-[20px] rounded">
-            <p className="text-white/[0.7] text-[14px] leading-7 tracking-wider">
+            <p className="text-black lg:text-white/[0.7] text-[14px] leading-7 tracking-wider">
               {discription}
             </p>
             <div className="flex items-center justify-start flex-wrap pt-[10px]">
