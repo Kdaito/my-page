@@ -19,8 +19,8 @@ const SkillCard: React.VFC<SkillCardProps> = ({
   const router = useRouter();
   return (
     <button data-aos="fade-up" onClick={() => router.push(link)}>
-      <div className="relative w-full h-[310px] bg-card rounded-[20px] px-[20px] py-[40px] lg:hover:scale-105 duration-200">
-        <div className="absolute top-[-60px] bg-card p-[10px] rounded-[50%] border-[15px] border-main">
+      <div className="relative w-full h-[310px] bg-main rounded-[20px] px-[20px] py-[40px] lg:hover:scale-105 duration-200 text-white">
+        <div className="absolute top-[-60px] bg-main p-[10px] rounded-[50%] border-[15px] border-white">
           <div className="relative overflow-hidden rounded-[50%] w-[60px] h-[60px]">
             <Image src={src} alt="language icon" layout="fill" />
           </div>
@@ -28,7 +28,7 @@ const SkillCard: React.VFC<SkillCardProps> = ({
         <p className="text-right pt-[10px] text-text/[0.7] text-[24px]">
           {label}
         </p>
-        <p className="text-left text-text/[0.5] mt-[10px] pt-[20px] border-t break-words">
+        <p className="text-left text-text/[0.5] mt-[10px] pt-[20px] border-t border-main break-words">
           {discription}
         </p>
       </div>
@@ -38,12 +38,12 @@ const SkillCard: React.VFC<SkillCardProps> = ({
 const Skills: React.VFC = () => {
   return (
     <>
-      <Head title="skills" />
-      <div className="pt-[90px] min-h-[100vh]">
+      <Head title="experience" />
+      <div className="pt-[90px] min-h-[100vh] text-black bg-white">
         <div className="w-[350px] md:w-[600px] px-[30px] lg:w-[800px] mx-auto py-[100px]">
           <h2
             data-aos="fade-up"
-            className="mx-auto lg:w-[70%] text-[20px] lg:text-[32px] font-bold mb-[40px] lg:mb-[50px] flex items-center after:h-[1px] after:grow after:bg-text/[0.3] after:ml-[15px] lg:after:ml-[30px]"
+            className="mx-auto lg:w-[70%] text-[20px] lg:text-[32px] font-bold mb-[40px] lg:mb-[50px] flex items-center after:h-[1px] after:grow after:bg-main after:ml-[15px] lg:after:ml-[30px]"
           >
             <span className="text-point-main">L</span>anguage
           </h2>

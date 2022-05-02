@@ -15,7 +15,7 @@ module.exports = {
       "humberger" : "#fff",
       "drawer": "#222",
       "skillCard": "transparent",
-      "white": "#fff",
+      "white": "#dedede",
       "black": "#333"
     },
     extend: {},

@@ -55,8 +55,8 @@ const Header: React.VFC = () => {
             <HeaderButton path="/">
               <span className="text-point-main">P</span>rofile
             </HeaderButton>
-            <HeaderButton path="/skills">
-              <span className="text-point-main">S</span>kills
+            <HeaderButton path="/experience">
+              <span className="text-point-main">E</span>xperience
             </HeaderButton>
             <HeaderButton path="/products">
               <span className="text-point-main">P</span>ortfolio
@@ -84,9 +84,9 @@ const Header: React.VFC = () => {
           </button>
           <button
             className="text-[32px] w-full py-[20px]"
-            onClick={() => onClickDrawer("/skills")}
+            onClick={() => onClickDrawer("/experience")}
           >
-            <span className="text-point-main">S</span>kills
+            <span className="text-point-main">E</span>xperience
           </button>
           <button
             className="text-[32px] w-full py-[20px]"
