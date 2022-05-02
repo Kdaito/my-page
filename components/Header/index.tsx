@@ -12,7 +12,7 @@ const HeaderButton: React.VFC<HeaderButton> = ({ path, children }) => {
   return (
     <div className="relative">
       <button
-        className="text-[22px] px-[15px] py-[5px] after:absolute after:bottom-[-4px] after:left-[0] after:content-[''] after:w-[100%] after:h-[1px] after:bg-text/[0.5] after:origin-center after:duration-300 after:scale-x-0 hover:after:scale-x-100 hover:after:origin-center"
+        className="text-[22px] px-[15px] py-[5px] after:absolute after:bottom-[-4px] after:left-[0] after:content-[''] after:w-[100%] after:h-[1px] after:bg-white/[0.5] after:origin-center after:duration-300 after:scale-x-0 hover:after:scale-x-100 hover:after:origin-center"
         onClick={() => router.push(`${path}`)}
       >
         {children}
@@ -48,7 +48,7 @@ const Header: React.VFC = () => {
 
   return (
     <>
-      <div className="fixed z-[9999] backdrop-blur-md background-header w-full h-[60px] md:h-[90px]">
+      <div className="fixed z-[9999] bg-main w-full h-[60px] md:h-[70px] text-white">
         <div className="h-full w-full md:w-[80%] px-[30px] max-w-[1280px] mx-auto flex items-center justify-between">
           <h1 className="text-[26px] md:text-[32px] font-medium">K.Hiroto</h1>
           <div className="hidden w-[400px] lg:flex items-center justify-between">
