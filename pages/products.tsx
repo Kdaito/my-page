@@ -41,48 +41,50 @@ const ExperienceCard: React.VFC<ExperienceCardProps> = ({
   );
 
   return (
-    <div data-aos="fade-up" className="relative">
-      <div
-        className={`relative bg-[#000] lg:bg-point-main overflow-hidden rounded h-[550px] lg:w-[500px] lg:h-[350px] ${styleObj.imagePosition}`}
-      >
-        <Image
-          src={imageSrc}
-          layout="fill"
-          alt="portfolio"
-          objectFit="cover"
-          className="opacity-10 lg:opacity-40"
-        />
-      </div>
-      <div
-        className={`absolute ${styleObj.textBlockPosition} top-[50%] translate-y-[-50%]`}
-      >
+    <div data-aos="fade-up" className="md:px-[30px] md:py-[20px] bg-white rounded-md">
+      <div className="relative">
         <div
-          className={`${styleObj.titlePosition} px-[20px] md:px-[40px] lg:px-0 pb-[10px]`}
+          className={`relative bg-white lg:bg-main overflow-hidden rounded h-[550px] lg:w-[500px] lg:h-[350px] ${styleObj.imagePosition}`}
         >
-          <p className="text-point-main">Portfolio Name</p>
-          <p className="text-[32px] tracking-widest">{title}</p>
+          <Image
+            src={imageSrc}
+            layout="fill"
+            alt="portfolio"
+            objectFit="cover"
+            className="opacity-10 lg:opacity-40"
+          />
         </div>
-        <div className="lg:bg-[#112340] lg:w-[650px] p-[20px] md:p-[40px] lg:p-[20px] rounded">
-          <p className="text-text/[0.7] text-[14px] leading-7 tracking-wider">
-            {discription}
-          </p>
-          <div className="flex items-center justify-start flex-wrap pt-[10px]">
-            {tags.map((tag) => (
-              <div key={tag}>
-                <TagChip label={tag} />
-              </div>
-            ))}
+        <div
+          className={`absolute ${styleObj.textBlockPosition} top-[50%] translate-y-[-50%]`}
+        >
+          <div
+            className={`${styleObj.titlePosition} px-[20px] md:px-[40px] lg:px-0 pb-[10px]`}
+          >
+            <p className="text-point-main">Portfolio Name</p>
+            <p className="text-[32px] tracking-widest">{title}</p>
           </div>
-        </div>
-        <div
-          className={`flex items-center ${styleObj.linkPosition} px-[15px] md:px-[25px] lg:px-0 h-[60px]`}
-        >
-          <a onClick={() => onClickUrl(githubUrl)}>
-            <BsGithub className="mx-[20px] text-[20px] duration-200" />
-          </a>
-          <a onClick={() => onClickUrl(url)}>
-            <IoDesktopSharp className="mx-[20px] text-[20px] duration-200" />
-          </a>
+          <div className="lg:bg-main lg:w-[650px] p-[20px] md:p-[40px] lg:p-[20px] rounded">
+            <p className="text-white/[0.7] text-[14px] leading-7 tracking-wider">
+              {discription}
+            </p>
+            <div className="flex items-center justify-start flex-wrap pt-[10px]">
+              {tags.map((tag) => (
+                <div key={tag}>
+                  <TagChip label={tag} />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div
+            className={`flex items-center ${styleObj.linkPosition} px-[15px] md:px-[25px] lg:px-0 h-[60px]`}
+          >
+            <a onClick={() => onClickUrl(githubUrl)}>
+              <BsGithub className="mx-[20px] text-[20px] duration-200" />
+            </a>
+            <a onClick={() => onClickUrl(url)}>
+              <IoDesktopSharp className="mx-[20px] text-[20px] duration-200" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -93,13 +95,19 @@ const Experience: React.VFC = () => {
   return (
     <>
       <Head title="products" />
-      <div className="h-[100vh] pt-[180px] sm:pt-[90px] flex items-center justify-center w-[100%] md:w-[600px] lg:w-[800px] px-[30px] md:px-0 mx-auto">
+      <div className="text-white h-[100vh] pt-[180px] sm:pt-[90px] flex items-center justify-center w-[100%] md:w-[600px] lg:w-[800px] px-[30px] md:px-0 mx-auto">
         <div>
-          <h2 data-aos="fade-up" className="w-[100%] lg:w-[70%] text-[20px] lg:text-[32px] font-bold mb-[40px] lg:mb-[50px] flex items-center after:h-[1px] after:grow after:bg-text/[0.3] after:ml-[15px] lg:after:ml-[30px]">
+          <h2
+            data-aos="fade-up"
+            className="w-[100%] lg:w-[70%] text-[20px] lg:text-[32px] font-bold mb-[40px] lg:mb-[50px] flex items-center after:h-[1px] after:grow after:bg-point-main after:ml-[15px] lg:after:ml-[30px]"
+          >
             <span className="text-point-main">P</span>ortfolio
           </h2>
           <div className="w-full flex flex-col-reverse md:flex-col lg:flex-row lg:gap-[40px]">
-            <div data-aos="fade-up" className="flex-1 tracking-wide leading-8 text-[17px] text-text/[0.8] pt-[60px] md:pt-0">
+            <div
+              data-aos="fade-up"
+              className="flex-1 tracking-wide leading-8 text-[17px] text-text/[0.8] pt-[60px] md:pt-0"
+            >
               <p>
                 In this page, I&apos;ll show you some of{" "}
                 <span className="text-point-main">my portfolio</span> that I
@@ -115,7 +123,11 @@ const Experience: React.VFC = () => {
                 look at them, if you cannot understand Japanese.
               </p>
             </div>
-            <div data-aos="fade-up" data-aos-delay="500" className="h-[250px] w-[250px] md:h-[300px] md:mt-[40px] lg:mt-0 md:w-[300px] ml-[35px] md:mx-auto lg:ml-0 bg-point-main relative after:w-[250px] md:after:w-[300px] after:h-[250px] md:after:h-[300px] after:absolute after:top-[20px] after:border-[3px] after:border-point-main after:left-[20px] after:z-[-1]">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="500"
+              className="h-[250px] w-[250px] md:h-[300px] md:mt-[40px] lg:mt-0 md:w-[300px] ml-[35px] md:mx-auto lg:ml-0 bg-point-main relative after:w-[250px] md:after:w-[300px] after:h-[250px] md:after:h-[300px] after:absolute after:top-[20px] after:border-[3px] after:border-point-main after:left-[20px] after:z-[-1]"
+            >
               <Image
                 src="/develop.png"
                 alt="profile icon"
